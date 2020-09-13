@@ -1,17 +1,29 @@
 :root {
-    --dark-blue: rgb(37, 48, 60);
-    --blue: #2C3D4E;
-    --text-color: #C3CFE0;
-    --orange: rgb(255, 192, 0);
-    --dark-orange: rgb(199, 149, 1);
+    --dark-gray: rgb(18, 18, 18);
+    --gray: #181818;
+    --text-color: #c8c8c8;
+    --links-color: rgb(69, 135, 185);
     --border-color: rgba(105, 109, 125, 0.4);
     --border-radius: 5px;
-    --shadow-block: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+    --shadow-block: 0 0 15px 0 rgba(0, 0, 0, 0.42);
+}
+
+body::-webkit-scrollbar {
+    width: 17px;
+    background: rgba(24, 24, 24, 1);
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(100, 100, 100, 1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #303030;
 }
 
 .post__translatation-link:hover {
     text-decoration: none;
-    color: var(--dark-orange);
+    color: var(--text-color);
 }
 
 .user-info__image-pic_small {
@@ -23,26 +35,26 @@
 }
 
 .post__tag:hover {
-    color: var(--dark-orange);
+    color: var(--text-color);
 }
 
 .post__tag {
-    color: var(--orange);
+    color: var(--links-color);
     transition: 0.2s;
 }
 
 .post__type-label,
 .post-info__meta-label {
     text-align: center;
-    border: 1px dashed var(--orange);
+    border: 1px dashed var(--links-color);
 }
 
-#TMpanel .container .bmenu>a {
+#TMpanel .container .bmenu > a {
     transition: 0.5s ease-in-out;
 }
 
-#TMpanel .container .bmenu.slink>a {
-    color: var(--orange) !important;
+#TMpanel .container .bmenu.slink > a {
+    color: var(--links-color) !important;
 }
 
 .content-list_comments .comment__folding-dotholder {
@@ -54,16 +66,16 @@
 }
 
 .promo-item:hover {
-    background-color: var(--blue);
+    background-color: var(--gray);
 }
 
 .app-client__description,
 .defination-list__label,
 .bmenu__label,
-#TMpanel .container .bmenu>a:hover,
-#TMpanel .container .bmenu>a.current,
+#TMpanel .container .bmenu > a:hover,
+#TMpanel .container .bmenu > a.current,
 a.post__type-label:hover {
-    color: var(--dark-orange);
+    color: var(--text-color);
 }
 
 .comment__date-time {
@@ -82,7 +94,7 @@ a.post__type-label:hover {
 
 .n-dropdown-menu__item-link_flow:hover {
     background-color: transparent;
-    color: var(--dark-orange);
+    color: var(--text-color);
 }
 
 .stacked-menu__item-link:hover span,
@@ -105,7 +117,7 @@ a.post__type-label:hover {
 .promo-item__aside,
 .stacked-counter__value_magenta,
 .user-info__nickname_doggy,
-#TMpanel .container .bmenu>a,
+#TMpanel .container .bmenu > a,
 .post__text-html h1 a:hover,
 .post__text-html h1 a:active,
 .post__text-html h2 a:hover,
@@ -122,7 +134,7 @@ a.post__type-label:hover {
 .post__text-html a:visited,
 .post__type-label,
 .post-info__meta-label {
-    color: var(--orange);
+    color: var(--links-color);
     text-decoration: none;
 }
 
@@ -136,14 +148,14 @@ a.post__type-label:hover {
 
 .list-snippet__nickname,
 .post__text-html font {
-    color: var(--dark-orange)
+    color: var(--text-color)
 }
 
 .default-block__polling-title,
 .h-info h2:nth-child(n+2),
 .company-tweet__username:link,
-#tracker-page .tracker-table__cell.comment_count>a,
-.topic-form form .item>label,
+#tracker-page .tracker-table__cell.comment_count > a,
+.topic-form form .item > label,
 .tabs-menu__item-counter_total,
 .is-subscribed .list-snippet__title-link,
 .is-subscribed .list-snippet__fullname,
@@ -165,7 +177,7 @@ a.post__type-label:hover {
 .user-info__nickname_small:hover,
 .inline-list__item_hub a:hover,
 .nav-links__item a:hover {
-    color: var(--dark-orange);
+    color: var(--text-color);
 }
 
 .tabs-menu__item-text_active,
@@ -178,7 +190,7 @@ form .item input[type=password],
 form .item input[type=text],
 form .item input[type=email],
 .search-field__input[type=text] {
-    background-color: var(--blue);
+    background-color: var(--gray);
     border-color: var(--border-color);
     color: var(--text-color);
 }
@@ -202,7 +214,7 @@ form .item input[type=email],
 .stacked-menu__item-link,
 .comment-form__title,
 .footer-misprints,
-.sidebar-block__list>li,
+.sidebar-block__list > li,
 .tags-cloud li a,
 .sidebar-block__paragraph,
 .sort-panel__item-toggler,
@@ -216,7 +228,7 @@ form .item input[type=email],
 .news-topic__attr,
 .h-message__content,
 .company-links__title,
-.defination-list__value>a,
+.defination-list__value > a,
 .defination-list__link,
 .defination-list__value,
 .post__translatation-link,
@@ -236,14 +248,23 @@ form .item input[type=email],
 .inline-list__item_hub a,
 .post__time,
 .default-block__header h3,
+.post-info__title,
 .post-info__title:visited,
 .post-info__title-link:visited,
 .fonts-loaded .post-info__title,
 .icon-svg_logo-habrahabr,
 .nav-links__item a,
-.post__text-html {
+.post__text-html,
+.news-block__title-link,
+.news-topic__title,
+.partner-info__title,
+.partner-info__description {
     color: var(--text-color);
     text-decoration: none;
+}
+
+.teaser__body-title {
+    color: var(--text-color) !important;
 }
 
 a.post__type-label,
@@ -265,7 +286,7 @@ a.post__type-label,
 }
 
 .n-dropdown-menu__item-link:hover {
-    border-left-color: var(--orange);
+    border-left-color: var(--links-color);
     background-color: transparent;
 }
 
@@ -281,8 +302,9 @@ a.post__type-label,
     color: var(--text-color) !important;
 }
 #allrecords .rendered {
-    background-color: var(--dark-blue) !important;
+    background-color: var(--dark-gray) !important;
 }
+body,
 .search-field__select,
 .company-app__description,
 .company-app__title,
@@ -310,7 +332,7 @@ a.post__type-label,
 .buttons input[type=submit],
 .buttons a.button,
 .app-client__title,
-form .item>label,
+form .item > label,
 .user_settings .upgrade_settings_form p,
 .h-form-select__control,
 .popup__head-title,
@@ -330,7 +352,7 @@ form .item>label,
     width: 100%;
 }
 
-.topic-form .blue_buttons_panel {
+.topic-form .gray_buttons_panel {
     padding-left: 0px;
 }
 .search-field__select,
@@ -350,7 +372,7 @@ form .item>label,
 .tm-editor__footer,
 .tm-editor__post-area,
 .switch-light__button,
-.switch-light input:checked~.switch-light__buttons .switch-light__button:first-child span,
+.switch-light input:checked ~ .switch-light__buttons .switch-light__button:first-child span,
 .wysiwyg-toolbar,
 .tabs-menu__item_devided,
 .tabs-menu__item_devided.active,
@@ -439,14 +461,16 @@ form .item>label,
 .layout__row_services #TMpanel,
 .layout__row_navbar,
 .layout__elevator:hover,
-.default-block {
-    background-color: var(--blue) !important;
+.default-block,
+.partner-info {
+    background-color: var(--gray) !important;
 }
+
 #allrecords,
 .post-donate,
-.topic-form .blue_buttons_panel,
+.topic-form .gray_buttons_panel,
 .switch-light__button,
-.switch-light input:checked~.switch-light__buttons .switch-light__button:first-child span,
+.switch-light input:checked ~ .switch-light__buttons .switch-light__button:first-child span,
 .n-dropdown-menu,
 .tm-editor__textarea,
 a.sort-panel__item-toggler.active,
@@ -457,7 +481,7 @@ a.sort-panel__item-toggler.active,
 .layout__row,
 .post-share,
 .layout__row_body {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-gray);
 }
 
 .toggle-menu__item-link {
@@ -472,16 +496,16 @@ a.sort-panel__item-toggler.active,
 .company-info__image-pic,
 .form-checkbox__label:before,
 .form-checkbox__fake:before,
-.form-checkbox__real:checked+.form-checkbox__label:before,
-.form-checkbox__real:checked+.form-checkbox__fake:before,
+.form-checkbox__real:checked + .form-checkbox__label:before,
+.form-checkbox__real:checked + .form-checkbox__fake:before,
 .app-client__image,
 .media-obj__image-pic,
-.btn_navbar_user-dropdown>img {
+.btn_navbar_user-dropdown > img {
     border-radius: 50%;
 }
 
 .h-form-input__control {
-    background-color: var(--blue);
+    background-color: var(--gray);
     color: var(--text-color);
     border-color: var(--border-color);
 }
@@ -514,7 +538,7 @@ form .item input[type=email],
 .toggle-menu_pagination,
 .promo-block,
 .dropdown-container,
-.btn+.btn,
+.btn + .btn,
 .toggle-menu,
 .post__habracut-btn,
 .post-stats,
@@ -533,9 +557,18 @@ form .item input[type=email],
 }
 
 .toggle-menu__item_pagination:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-gray);
 }
 
+.author-panel__user-info {
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    background-color: var(--gray) !important;
+}
+
+.promo-block {
+    background-color: var(--gray) !important;
+}
 
 /* *
 Atom One Dark by Daniel Gamage
@@ -553,7 +586,6 @@ hue-5-2: #be5046
 hue-6:   #d19a66
 hue-6-2: #e6c07b
 */
-
 .comment__message pre .hljs,
 .post__text-html pre .hljs {
     display: block;
@@ -564,7 +596,7 @@ hue-6-2: #e6c07b
     padding: 0.5em;
     color: #abb2bf;
     background: #282c34;
-    border-color: var(--border-color); 
+    border-color: var(--border-color);
     font-family: monospace, monospace !important;
 }
 .comment__message pre .hljs-comment,
@@ -663,14 +695,13 @@ hue-6-2: #e6c07b
 
 
 /* Оформление страницы авторизации */
-
 .layout {
-    background-color: var(--dark-blue)
+    background-color: var(--dark-gray)
 }
 
 .shadow-box {
     box-shadow: var(--shadow-block);
-    background-color: var(--blue);
+    background-color: var(--gray);
     border: 1px solid var(--border-color);
 }
 
@@ -681,31 +712,30 @@ hue-6-2: #e6c07b
 }
 
 #login_form .button_primary {
-    background-color: var(--dark-orange);
-    color: var(--dark-blue);
+    background-color: var(--text-color);
+    color: var(--dark-gray);
     font-weight: bold;
     transition: background-color 200ms ease-out;
 }
 
 #login_form .button_primary:hover {
-    color: var(--dark-blue);
-    background-color: var(--orange);
+    color: var(--dark-gray);
+    background-color: var(--links-color);
 }
 
 #login_form .form__field-input {
     color: var(--text-color);
-    background-color: var(--dark-blue);
+    background-color: var(--dark-gray);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
 }
 
 .form__field_socials .socials-buttons__button:not(:hover) {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-gray);
 }
 
 
 /* Фикс цветов уведомлений: https://habr.com/ru/tracker/ */
-
 #tracker-page tr {
     display: flex;
 }
@@ -719,7 +749,7 @@ hue-6-2: #e6c07b
 
 #tracker-page .tracker-table__row.new,
 #tracker-page tr:first-of-type {
-    background-color: var(--blue);
+    background-color: var(--gray);
 }
 
 #tracker-page tr:first-of-type .tracker-table__header:last-child {
@@ -738,11 +768,11 @@ hue-6-2: #e6c07b
     flex-grow: 1;
 }
 
-#tracker-page .tracker-table__row.new .post_title>a {
-    color: var(--orange);
+#tracker-page .tracker-table__row.new .post_title > a {
+    color: var(--links-color);
 }
 
-#tracker-page .tracker-table__cell.post_title>a {
+#tracker-page .tracker-table__cell.post_title > a {
     color: var(--text-color);
 }
 
@@ -768,7 +798,6 @@ hue-6-2: #e6c07b
 
 
 /* Белый заголовок в статье */
-
 .post__title-text {
     color: var(--text-color);
 }
@@ -778,14 +807,13 @@ hue-6-2: #e6c07b
 }
 
 .post__title:hover a {
-    color: var(--dark-orange);
+    color: var(--text-color);
 }
 
 
 /* Блок "Новости" в ленте */
-
 .content-list__item_news-block {
-    background-color: var(--blue);
+    background-color: var(--gray);
     padding: 20px;
     margin-bottom: 25px;
     border-radius: var(--border-radius);
@@ -797,18 +825,17 @@ hue-6-2: #e6c07b
 }
 
 .fonts-loaded .news-topic__title:hover {
-    color: var(--dark-orange);
+    color: var(--text-color);
 }
 
 
 /* Посты в ленте отдельными блоками */
-
 .content-list__item_post:first-child {
     padding-top: 20px;
 }
 
 .content-list__item_post {
-    background-color: var(--blue);
+    background-color: var(--gray);
     padding: 20px;
     margin-bottom: 25px;
     border-radius: var(--border-radius);
@@ -817,9 +844,8 @@ hue-6-2: #e6c07b
 
 
 /* Пост на странице поста отдельным блоком */
-
 .post__wrapper {
-    background-color: var(--blue);
+    background-color: var(--gray);
     padding: 20px;
     margin-bottom: 25px;
     border-radius: var(--border-radius);
